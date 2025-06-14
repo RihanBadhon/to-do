@@ -14,7 +14,7 @@ function TodoList({ todos, dispatch }) {
   const submitEdit = (id) => {
     const trimmed = editText.trim();
     if (trimmed === "") return;
-    dispatch({ type: 'UPDATE_TASK', payload: { id, text: trimmed } });
+    dispatch({ type: 'Update_Task', payload: { id, text: trimmed } });
     setEditingId(null);
     setEditText("");
   };

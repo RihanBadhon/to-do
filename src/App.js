@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import { todoReducer, initialState } from './reducer/TodoReducer';

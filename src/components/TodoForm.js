@@ -12,7 +12,7 @@ function TodoForm({ dispatch }) {
       return;
     }
 
-    dispatch({ type: 'ADD_TASK', payload: text.trim() });
+    dispatch({ type: 'Add_Task', payload: text.trim() });
     setText("");
     setError(false);
   };
@@ -31,6 +31,7 @@ function TodoForm({ dispatch }) {
         className={error ? 'error' : ''}
       />
       <button type="submit">Add Task</button>
+      {/* Added Some Validation */}
       {error && <p className="error-message">Unfortunately, Task Cannot Be Empty!</p>}
     </form>
   );

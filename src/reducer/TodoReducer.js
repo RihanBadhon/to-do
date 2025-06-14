@@ -3,7 +3,7 @@ export const initialState = JSON.parse(localStorage.getItem('todos')) || [];
 export function todoReducer(state, action) {
   switch (action.type) {
     // Add Method
-    case 'ADD_TASK':
+    case 'Add_Task':
       return [
         ...state,
         {
@@ -15,11 +15,11 @@ export function todoReducer(state, action) {
       ];
 
     // Delete Method
-    case 'DELETE_TASK':
+    case 'Delete_Task':
       return state.filter(todo => todo.id !== action.payload);
 
     // Toggle Method
-    case 'TOGGLE_TASK':
+    case 'Toggle_Task':
       return state.map(todo =>
         todo.id === action.payload
           ? { ...todo, completed: !todo.completed }
@@ -27,7 +27,7 @@ export function todoReducer(state, action) {
       );
 
     // Edit Method
-    case 'UPDATE_TASK':
+    case 'Update_Task':
       return state.map(todo =>
         todo.id === action.payload.id
           ? {

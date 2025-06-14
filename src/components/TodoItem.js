@@ -27,13 +27,13 @@ function TodoItem({ todo, isEditing, editText, setEditText, submitEdit, startEdi
           return (
             <>
               <span>{todo.text}</span> - <small><FaCalendarAlt /> {todo.date}</small>
-              <button className='toggle-btn' onClick={() => dispatch({ type: 'TOGGLE_TASK', payload: todo.id })}>
+              <button className='toggle-btn' onClick={() => dispatch({ type: 'Toggle_Task', payload: todo.id })}>
                 <FaCheck />
               </button>
               <button className='edit-btn' onClick={startEditing}>
                 <FaEdit />
               </button>
-              <button className='delete-btn' onClick={() => dispatch({ type: 'DELETE_TASK', payload: todo.id })}>
+              <button className='delete-btn' onClick={() => dispatch({ type: 'Delete_Task', payload: todo.id })}>
                 <FaTrash />
               </button>
               {todo.completed && <span className="done-indicator">✓</span>}
